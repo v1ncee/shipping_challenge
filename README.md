@@ -1,7 +1,10 @@
 # shipping_challenge
 
-Shipping challenge for school. /n
-Use docker-compose to manage the different containers. /n
-  -> docker-compose up -d /n
+## Shipping challenge for school. 
+
+Use docker-compose to manage the different containers. 
+'''
+docker-compose up -d 
+'''
 
 Enjoy!
