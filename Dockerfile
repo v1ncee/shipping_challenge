@@ -1,2 +1,2 @@
-FROM php:7.0.26-cli-alpine3.4
+FROM php:7-apache
 RUN docker-php-ext-install mysqli
