@@ -21,7 +21,7 @@
     $res = mysqli_query($link, $query);
         
     echo '<table class="table table-striped">';
-    echo '<thead><tr><th></th><th>jaar</th><th>maker</th><th>naam</th></tr></thead>';
+    echo '<thead><tr><th>jaar</th><th>maker</th><th>naam</th></tr></thead>';
     while($values = $res->fetch_array(MYSQLI_ASSOC)){
         echo '<tr>';
         foreach($values as $value){
