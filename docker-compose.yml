@@ -1,0 +1,28 @@
+version: "3"
+services:
+    www:
+        build: .
+        ports: 
+            - "8080:80"
+        volumes:
+            - ./web:/var/www/html/
+        links:
+            - db
+        networks:
+            - default
+    db:
+        image: mysql
+        ports: 
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: test
+            MYSQL_USER: root
+            MYSQL_PASSWORD: usbw
+            MYSQL_ROOT_PASSWORD: usbw 
+        volumes:
+            - ./sql:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+volumes:
+    persistent:
