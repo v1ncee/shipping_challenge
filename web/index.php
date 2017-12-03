@@ -64,7 +64,7 @@
     $query = 'SELECT * From auto';
 
     $res = mysqli_query($link, $query);
-        
+       
     echo '<table class="table table-striped">';
     echo '<thead class="table table-striped"><tr><th>Jaar</th><th>Maker</th><th>Naam</th></tr></thead>';
     while($values = $res->fetch_array(MYSQLI_ASSOC)){
