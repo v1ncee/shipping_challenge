@@ -59,7 +59,7 @@
     
 
     //Database <--> connection
-    $link = mysqli_connect("127.0.0.1", "user", "test", "myDb");
+    $link = mysqli_connect('db', 'user', 'test', "myDb");
         
     $query = 'SELECT * From auto';
 
