@@ -61,7 +61,7 @@
     //Database <--> connection
     $link = mysqli_connect('db', 'user', 'test', "myDb");
 
-    $query = 'SELECT * From auto where jaar = 2012';
+    $query = 'SELECT * From Auto where jaar = 2012';
 
     $result = mysqli_query($link, $query);
 
