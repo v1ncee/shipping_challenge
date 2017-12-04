@@ -63,21 +63,21 @@
 
     $query = 'SELECT * From auto where jaar = 2011';
 
-    $res = mysqli_query($link, $query);
+    $result = mysqli_query($link, $query);
 
     echo '<table class="table table-striped">';
     echo '<thead class="table table-striped"><tr><th>Jaar</th><th>Maker</th><th>Naam</th></tr></thead>';
-    while($values = $res->fetch_array(MYSQLI_ASSOC)){
+    while($value = $result->fetch_array(MYSQLI_ASSOC)){
         echo '<tr>';
-        foreach($values as $value){
-            echo '<td>' . $value . '</td>';
+        foreach($value as $element){
+            echo '<td>' . $element . '</td>';
         }
         echo '</tr>';
     }
     echo '</table>';
 
 
-    $res->close();
+    $result->close();
     mysqli_close($link);
     ?>
 
